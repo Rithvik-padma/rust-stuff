@@ -1,3 +1,5 @@
 *.exe
 *.pdb
-/target/
+target/
+Cargo.lock
+.vscode/

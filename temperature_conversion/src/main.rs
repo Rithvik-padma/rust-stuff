@@ -1,8 +1,8 @@
 use std::io;
 
 fn main() {
-    let mut temp_type = String::new();
-    let mut temp_to_convert = String::new();
+    let mut temp_type: String = String::new();
+    let mut temp_to_convert: String = String::new();
 
     println!("Enter the type of temperature to convert");
     println!("For Fahrheneit: input F");

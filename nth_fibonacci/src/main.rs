@@ -1,7 +1,7 @@
 use std::io;
 
 fn main() {
-    let mut index = String::new();
+    let mut index: String = String::new();
     
     println!("Enter the index of the fibonacci number in the series:");
     io::stdin()
@@ -10,15 +10,15 @@ fn main() {
     
     let index:u32 = index.trim().parse().expect("Invalid index!");
 
-    let fibonacci_number = 
+    let fibonacci_number: u32 = 
     if (index == 1) || (index == 2) {index-1}
     else {
         let mut prev: u32 = 0;
         let mut next: u32 = 1;
-        let mut temp_index = index;
+        let mut temp_index: u32 = index;
 
         while temp_index-2 != 0 {
-            let temp = next;
+            let temp: u32 = next;
             next += prev;
             prev = temp;
 

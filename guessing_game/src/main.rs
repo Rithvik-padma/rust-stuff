@@ -5,12 +5,12 @@ use std::cmp::Ordering;
 fn main() {
     println!("Guess the number!");
 
-    let secret_number = rand::thread_rng().gen_range(1..=99);
+    let secret_number: u32 = rand::thread_rng().gen_range(1..=99);
 
     loop {
         println!("\nInput your guess:");
 
-        let mut guess = String::new();
+        let mut guess: String = String::new();
         io::stdin()
             .read_line(&mut guess)
             .expect("Failed to read the guess");
@@ -40,7 +40,7 @@ fn main() {
             }
         }
         
-        let mut to_continue = String::new();
+        let mut to_continue: String = String::new();
 
         io::stdin()
             .read_line(&mut to_continue)
@@ -48,7 +48,7 @@ fn main() {
         
         if !((to_continue.trim() == "Y") || (to_continue.trim() == "y")) {
             println!("Do you want to know the number? (Y/N)");
-            let mut opinion = String::new();
+            let mut opinion: String = String::new();
 
             io::stdin()
                 .read_line(&mut opinion)

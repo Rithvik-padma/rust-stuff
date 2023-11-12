@@ -1,5 +1,5 @@
 fn main() {
-    let new_lines = [
+    let new_lines: [&str; 11] = [
         "Two turtle doves",
         "Three French hens",
         "Four calling birds",
@@ -13,7 +13,7 @@ fn main() {
         "Twelve drummers drumming"
     ];
 
-    let days_number = [
+    let days_number: [&str; 11] = [
         "second",
         "third",
         "fourth",

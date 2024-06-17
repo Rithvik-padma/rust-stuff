@@ -1,3 +1,30 @@
+struct User {
+    active: bool,
+    username: String,
+    email: String,
+    sign_in_count: u64,
+}
+
+struct Color(i32, i32, i32);
+struct Point(i32, i32, i32);
+
+
+fn create_user(username: String, email: String) -> User{
+    User {
+        active: true,
+        username,
+        email,
+        sign_in_count: 1,
+    }
+}
+
+fn alternate_user(user: User, email: String) -> User{
+    User{
+        email: email,
+        ..user
+    }
+}
+
 fn main(){
     let mut count = 0;
     'counting_up: loop{
